@@ -38,7 +38,7 @@ const Item = ({ image, text }) => (
 const App = () => (
   <SafeAreaProvider style={styles.container2}>
     <SafeAreaView style={styles.container}>
-      <Text style={styles.headerTitle}>Flamengo</Text>
+      <Text style={styles.headerTitle}>FlaApp</Text>
       <FlatList
         data={DATA}
         renderItem={({ item }) => <Item image={item.image} text={item.text} />}
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 25,
     margin: 10,
+    fontWeight: 'bold',
   },
   item: {
     backgroundColor: '#D3D3D3',
@@ -71,7 +72,6 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: 220,
-
     borderRadius: 10,
     marginTop: 0,
     
