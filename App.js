@@ -7,19 +7,24 @@ import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 const DATA = [
   
   {
-    
-    image: 'https://cgi.chevrolet.com/mmgprod-us/dynres/prove/image.gen?i=2025/1YC07/1YC07__2LT/GBA_HTM_0ST_1SZ_2LT_2ST_3ST_4AA_4ST_5A7_5FC_5ST_6X1_719_7X1_8X2_9L3_9X2_A2X_A7K_AH2_AHE_AHH_AJ7_AL0_AL9_AP9_AQA_AT9_AXJ_B72_BAZ_BC7_BGR_CF7_CJ2_D3V_DRZ_DYX_EF7_EFR_EPH_ERI_EYT_FE3_FJW_G96_GM7_IOK_J25_J55_J6A_K4C_KI3_KQV_KRV_LHD_LT2_M1L_MAH_N38_NE1_NE8_NGA_NK4_NKD_NPP_NUB_PPW_PRF_Q9A_R9N_RWL_SLM_T0A_T4L_T8Z_TB8_TDM_TQ5_TTW_U2K_U80_UD7_UDV_UE1_UE4_UEU_UFG_UFT_UG1_UHX_UHY_UJN_UKT_UMN_UQH_UQT_UTJ_UTU_UTV_UV6_UVA_V08_V8D_VA5_VH9_VHM_VK3_VRF_VRG_VRH_VRK_VRL_VRM_VRN_VRR_VT7_VV4_WMZ_XFQ_XL8_Z51gmds2.jpg&v=deg01&std=true&country=US',
-    text: [" Marca: Chevrolet", " Modelo: Corvette", "Ano: 2025"],
+    id: '1',
+    image: 'https://i.pinimg.com/736x/af/41/fc/af41fc65f1fa2c145ff00106568afa39.jpg',
+    text: ["Mundial: 1x", "Anos: 1981", "Finais: Flamengo 3x0 Liverpool"],
   },
   {
-    
-    image: 'https://media.bailliegifford.com/mws/cq0fn2lu/shutterstock_2074849312.jpg',
-    text: [" Marca: Ferrari", " Modelo: SF90", "Ano: 2023"],
+    id: '2',
+    image: 'https://i.pinimg.com/736x/26/3e/09/263e09a8b6342b65bb8a8bd1f5dbfec5.jpg',
+    text: ["Copa Libertadores: 3x", "Anos: 1981 2019 2022", "Finais:", "Flamengo 4x2(Ag) Cobreloa", "Flamengo 2x1 River Plate", "Flamengo 1x0 Athletico Paranaense"],
   },
   {
-    
-    image: 'https://s2-autoesporte.glbimg.com/axnbbSqvvknTgdAFCpMjDI_cuAI=/0x0:1200x675/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2023/b/t/EZlzFfQVWgT2bZpNXi6A/nissan-gt-r-nismo-special-edition-my2024-02.jpg',
-    text: [" Marca: Nissan", " Modelo: GT-R", "Ano: 2024"],
+    id: '3',
+    image: 'https://media.gettyimages.com/id/1434873773/pt/foto/rio-de-janeiro-brazil-the-trophy-is-displayed-prior-to-the-second-leg-match-of-the-final-of.jpg?s=612x612&w=0&k=20&c=f4sSzU1nBTWxv2fk1ByFQzkoyiJZoPyLNeqQZNmuobk=',
+    text: ["Copa do Brasil: 5x", "Anos: 1990 2006 2013 2022 2024", "Finais:", "Flamengo 1x0(Ag) Goiás", "Flamengo 3x0(Ag) Vasco", "Flamengo 3x1(Ag) Athletico Paranaense", "Flamengo (P6)1x1(P5)(AG) Corinthians", "Flamengo 4x1(AG) Athletico Mineiro"],
+  },
+  {
+    id: '4',
+    image: 'https://i.pinimg.com/736x/b3/3a/00/b33a0061f9cb893876fbf32b98520bfc.jpg',
+    text: ["Brasileirão: 8x", "Anos:1980 1982 1983 1987 1992 2009 2019 2020"],
   },
 ];
 
@@ -31,9 +36,9 @@ const Item = ({ image, text }) => (
 );
 
 const App = () => (
-  <SafeAreaProvider>
+  <SafeAreaProvider style={styles.container2}>
     <SafeAreaView style={styles.container}>
-      <Text style={styles.headerTitle}>Carros Esportivos!</Text>
+      <Text style={styles.headerTitle}>Flamengo</Text>
       <FlatList
         data={DATA}
         renderItem={({ item }) => <Item image={item.image} text={item.text} />}
@@ -45,11 +50,11 @@ const App = () => (
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "black",
     flex: 1,
-    marginTop: StatusBar.currentHeight || 2,
   },
   headerTitle: {
-    color: 'black',
+    color: 'white',
     fontSize: 25,
     margin: 10,
   },
@@ -57,7 +62,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#D3D3D3',
     padding: 1,
     marginVertical: 8,
-    marginHorizontal: 13,
+    marginHorizontal: 10,
     alignItems: 'left',
     width: "95%", 
     borderRadius: 10, 
