@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
     color: '#333',
     textAlign: 'left',
-    
+    fontFamily: 'Inter-Black',
   },
 });
 
